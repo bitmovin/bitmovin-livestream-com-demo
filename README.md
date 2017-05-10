@@ -1,5 +1,6 @@
-# How it works
-This little demo allows you just to insert your livestream.com API Key and our Bitmovin Player License Key, so you can test you livestream.com livestreams with our fully customizable player.
+# [![bitmovin](https://cloudfront-prod.bitmovin.com/wp-content/themes/Bitmovin-V-0.1/images/logo3.png)](http://www.bitmovin.com)
+
+This demo allows you to insert your [livestream.com API Key](https://livestream.com/developers/api) and our [Bitmovin Player License Key](https://bitmovin.com/tutorials/get-started-bitmovin-html5-adaptive-player/), so you can test you livestream.com livestreams with our fully customizable player.
 
 ## Configuration
 **php/index.php**: Please replace the value of `$api_key` with your own livestream.com API key, and `$client_id` with 
@@ -24,3 +25,11 @@ Now, it is available via `http://localhost:9696/index.php`
 ### Client-side (Angular Frontend)
 Those files just need to be served by a web server of your choice. Once, that is done, open the URL to the `index.html`. 
 That's it :)
+
+---
+
+If you want to do it yourself, we also have several tutorials available, how you can use our player :)
+
+Setup Guide: https://bitmovin.com/player-documentation/
+
+Get Started: https://bitmovin.com/tutorials/get-started-bitmovin-html5-adaptive-player/
