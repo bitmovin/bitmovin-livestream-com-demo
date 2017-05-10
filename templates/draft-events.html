@@ -1,0 +1,5 @@
+<h2>Draft Events</h2>
+<div style="max-height: 600px; overflow: auto" ng-repeat="draftEvent in draftEvents">
+    <event event="draftEvent"></event>
+</div>
+<div class="well well-sm text-center" ng-show="!draftEvents.length">No Draft Events available!</div>

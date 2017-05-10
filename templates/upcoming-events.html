@@ -1,0 +1,5 @@
+<h2>Upcoming Events</h2>
+<div ng-repeat="upcomingEvent in upcomingEvents">
+    <event event="upcomingEvent"></event>
+</div>
+<div class="well well-sm text-center" ng-show="!upcomingEvents.length">No upcoming Events available!</div>
