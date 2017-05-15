@@ -7,7 +7,6 @@
             </div>
             <div class="col-xs-4 text-right">
                 <h4>
-                    <span class="label label-default" ng-show="livestreamDetails.live.likes.total">{{livestreamDetails.live.likes.total}} <span class="glyphicon glyphicon-heart-empty"></span></span>
                     <span class="label label-default" ng-show="event.isLive">{{event.viewerCount}}</span>
                     <span class="label" ng-class="event.isLive ? 'label-danger' : 'label-default'">LIVE</span>
                 </h4>
@@ -16,7 +15,7 @@
     </div>
     <div class="panel-body">
         <div class="row">
-            <div class="col-xs-6"><img ng-src="{{event.logo.smallUrl}}"
+            <div class="col-xs-6"><img ng-src="{{eventPreviewImgUrl}}"
                                        class="img-responsive img-thumbnail"></div>
             <div class="col-xs-6">
                 <div class="row">
@@ -27,18 +26,14 @@
                     <div class="col-xs-5">EventID:</div>
                     <div class="col-xs-7" style="overflow: auto">{{event.id}}</div>
                 </div>
-                <div class="row" ng-show="livestreamDetails.live">
-                    <div class="col-xs-5">Likes:</div>
-                    <div class="col-xs-7">{{livestreamDetails.live.likes.total || 0}} <span class="glyphicon" ng-class="livestreamDetails.live.likes.total > 0 ? 'glyphicon-heart':'glyphicon-heart-empty'"></span></div>
-                </div>
             </div>
         </div>
         <div class="row" style="padding-top: 15px">
-            <div class="col-md-12">{{event.description || 'No description available'}}</div>
+            <div class="col-md-12">{{event.description || 'No description available'}} {{}}</div>
         </div>
         <div class="row" style="padding-top: 15px">
             <div class="col-md-12">
-                <span class="label label-info" style="margin: 2px" ng-repeat="tag in event.tags">{{tag}}</span></div>
+                <span class="label label-info" style="margin: 2px" ng-repeat="tag in event.tags"></span></div>
         </div>
     </div>
     <div class="panel-footer text-center" ng-show="livestreamDetails.live.m3u8">
