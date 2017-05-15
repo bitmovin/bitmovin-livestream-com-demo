@@ -25,7 +25,7 @@ angular.module('livestreamBitmovin')
         this.accountId = 0;
 
         this.errorResponseHandler = function () {
-            var errMsg = "Error requesting token! Please check if the backend application of this example is running and your livestream.com API credentials are correct!";
+            var errMsg = "Error requesting token! Please check if the backend application of this example is running and your Livestream API credentials are correct!";
             console.error(errMsg);
         };
 
@@ -40,7 +40,7 @@ angular.module('livestreamBitmovin')
                         deferred.resolve(accountDetails);
                     },
                     error: function (e) {
-                        console.error("Unable to fetch livestream.com account details!", e.data.code, e.data.message);
+                        console.error("Unable to fetch Livestream account details!", e.data.code, e.data.message);
                         deferred.reject(e);
                     }
                 });
