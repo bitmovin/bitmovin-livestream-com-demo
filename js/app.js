@@ -4,7 +4,7 @@ angular.module('livestreamBitmovin', [])
             key: 'YOUR-BITMOVIN-PLAYER-LICENSE-KEY',
             source: {
                 title: "Bitmovin Player v7",
-                description: "Much livestream.com support, so many player API features, fully customizable UI, WOW ;)",
+                description: "Fully customizable player API and UI.",
                 poster: 'img/poster.jpg'
             },
             cast: {
@@ -12,6 +12,7 @@ angular.module('livestreamBitmovin', [])
             }
         },
         playerElementId: "player",
+        defaultPreviewImgUrl: 'img/blank_event.png',
         livestreamApiBaseUrl: 'https://livestreamapis.com/v2',
         clientServerBaseUrl: 'http://localhost:9696/token'
     })
@@ -76,6 +77,11 @@ angular.module('livestreamBitmovin', [])
                 templateUrl: 'templates/event.html',
                 controller: function ($scope) {
                     $scope.livestreamDetails = {};
+                    $scope.eventPreviewImgUrl = appConfig.defaultPreviewImgUrl;
+
+                    if(!/^(.*poster-default.jpeg)$/.test($scope.event.logo.smallUrl)) {
+                        $scope.eventPreviewImgUrl = $scope.event.logo.smallUrl;
+                    }
 
                     livestreamService.getVideosFromEvent($scope.event.id, {
                         success: function (data) {
