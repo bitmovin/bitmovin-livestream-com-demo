@@ -1,12 +1,12 @@
 # How it works
-This little demo allows you just to insert your livestream.com API Key and our Bitmovin Player License Key, so you can test you livestream.com livestreams with our fully customizable player.
+This little demo allows you just to insert your Livestream API Key and our Bitmovin Player License Key, so you can test your Livestream livestreams with our fully customizable player.
 
 ## Configuration
-**php/index.php**: Please replace the value of `$api_key` with your own livestream.com API key, and `$client_id` with 
-your own livestream.com Client ID. Both values are available in your livestream.com developer backend at 
+**php/index.php**: Please replace the value of `$api_key` with your own Livestream API key, and `$client_id` with 
+your own Livestream Client ID. Both values are available in your Livestream developer backend at 
 [https://livestream.com/developers/api](https://livestream.com/developers/api)
 
-**js/app.js**: At the beginning of the file you will find some configuration values, which define the base URls for the livestream.com API and the backend application of this example. Adjust those values if needed. 
+**js/app.js**: At the beginning of the file you will find some configuration values, which define the base URls for the Livestream API and the backend application of this example. Adjust those values if needed. 
 
 _Hint:_ If you are running this application not on localhost, please don't forget to insert your Bitmovin Player License Key in the configuration at `js/app.js` as well.
 
